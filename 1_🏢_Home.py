@@ -47,10 +47,9 @@ authenticator = stauth.Authenticate(
 # Main Page Layout
 def main():
     st.image("logo.png")
-    st.title("Welcome to MindfulNest 🧘‍♂️🧘‍♀️")
+    st.title("Welcome to GenEstate 🏢")
     st.markdown("""
-    ## Your Personalized Mental Health Companion 🌼
-    MindfulNest is here to support your mental well-being. Whether you're feeling overwhelmed, anxious, or simply need a space to reflect, we're here to help. Explore various tools and resources designed to assist you on your mental health journey.
+    ## *insert sub-text here* 💫
     """)
 
     st.divider()

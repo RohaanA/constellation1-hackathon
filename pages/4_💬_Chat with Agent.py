@@ -31,13 +31,17 @@ isAuth = st.session_state['authentication_status']
 
 if (isAuth == True):
     username = st.session_state.get("username", "User")  # Replace with actual username retrieval logic
-    st.title("Dr. Falconette 👩🏼‍⚕️")
-
-    # Initialize chat history# Initialize session state for messages and model
+    st.title("Agent Rick")
+    # Initialize chat history
+    # Initialize session state for messages and model
     if "messages" not in st.session_state:
         st.session_state.messages = [
-            {"role": "assistant", "content": "Hey there! 🦜 Dr. Falconette at your service! Ready to chat about anything and everything—whether you're curious about mental health or just need a friendly ear. Let's make your day a little brighter! 🌞 What's on your mind today?"}
+            {
+                "role": "assistant", 
+                "content": "Hello! 🧠 Data Navigator at your service! I'm here to help you traverse, analyze, and visualize your data with ease. Let me know what you're looking for—whether it's exploring trends, generating insights, or creating charts—and we'll dive right in! 🚀 What's your first question?"
+            }
         ]
+
     
     # # Display assistant response in chat message container
     # with st.chat_message("assistant"):
@@ -47,7 +51,7 @@ if (isAuth == True):
     # Button to clear chat history
     if st.button("Clear Chat History"):
         st.session_state.messages = [
-            {"role": "assistant", "content": "Hey there! 🦜 Dr. Falconette at your service! Ready to chat about anything and everything—whether you're curious about mental health or just need a friendly ear. Let's make your day a little brighter! 🌞 What's on your mind today?"}
+            {"role": "assistant", "content": ""}
         ]
     # Display chat messages from history on app rerun
     for message in st.session_state.messages:
